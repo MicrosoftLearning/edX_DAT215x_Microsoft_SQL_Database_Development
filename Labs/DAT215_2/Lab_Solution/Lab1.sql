@@ -32,11 +32,11 @@ SELECT p.ProductID,
        pm.ProductModelID,
        pd.Description
 FROM SalesLT.Product AS p
-LEFT OUTER JOIN SalesLT.ProductModel AS pm
+LEFT JOIN SalesLT.ProductModel AS pm
 ON p.ProductModelID = pm.ProductModelID
-LEFT OUTER JOIN SalesLT.ProductModelProductDescription AS pmpd
+LEFT JOIN SalesLT.ProductModelProductDescription AS pmpd
 ON pm.ProductModelID = pmpd.ProductModelID 
-LEFT OUTER JOIN SalesLT.ProductDescription AS pd
+LEFT JOIN SalesLT.ProductDescription AS pd
 ON pm.ProductModelID = pmpd.ProductModelID 
 ORDER BY p.ProductID,pm.ProductModelID;
 END
